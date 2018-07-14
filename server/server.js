@@ -3,11 +3,6 @@ const http = require("http");
 const express = require("express");
 const socketIO = require("socket.io");
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 01a5113778e18bc83bbaaea2262adcb17bf8e0e9
 const publicPath = path.join(__dirname, "../public");
 const port = process.env.PORT || 3000;
 var app = express();
@@ -19,6 +14,16 @@ app.use(express.static(publicPath));
 
 io.on("connection", (socket) => {
   console.log("New User Connected");
+
+  socket.emit("newMessage", {
+    from: "mike@trol.com",
+    body: "LOLOLOLOLOLOLO",
+    createdAt: 123
+  });
+
+  socket.on("createMessage", (message) => {
+    console.log("CreateMessage", message)
+  });
 
   socket.on("disconnect", () => {
     console.log("User Connection Disconnected!")
