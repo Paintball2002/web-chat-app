@@ -6,14 +6,15 @@
   <meta charset="utf-8">
   <title>Chat | Live Chat</title>
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user=scaleable=no">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 
 <body class="chat">
 
 
 	<div class="chat__sidebar">
-		<h3>Online</h3>
+		<h3>Online Users</h3>
 		<div id="users"></div>
 	</div>
 
@@ -29,14 +30,14 @@
 	  	</form>
 	  	<button id="send-location">Send location</button>
 	  </div>
-	 
+
 	</div>
 
 	<script id="message-template" type="text/template">
 		<li class="message">
-			
+
 			<div class="message__title">
-				
+
 				<h4>{{from}}</h4>
 				<span>{{at}}</span>
 
@@ -50,15 +51,15 @@
 
 	<script id="location-message-template" type="text/template">
 		<li class="message">
-			
+
 			<div class="message__title">
-				
+
 				<h4>{{from}}</h4>
 				<span>{{at}}</span>
 
 			</div>
 			<div class="message__body">
-				<p><a href="{{link}}" target="_blank">my current location</a></p>
+				<p><a href="{{link}}" target="_blank">My current location<i class="fal fa-link"></i></a></p>
 			</div>
 
 		</li>
